@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades.AyudaActivity"
+    android:padding="16dp"
+    android:background="@drawable/fondo">
+
+    <!-- Título de la sección de ayuda -->
+    <TextView
+        android:id="@+id/ayuda_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido a la sección de ayuda!"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Imagen llamativa -->
+    <ImageView
+        android:id="@+id/ayuda_imagen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/durango_image"
+        android:contentDescription="Imagen de Durango"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ayuda_titulo"
+        app:layout_constraintHeight_percent="0.3"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"/>
+
+    <!-- Descripción breve de la aplicación -->
+    <TextView
+        android:id="@+id/ayuda_descripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Esta aplicación está diseñada para enseñar sobre Durango a través de divertidas actividades interactivas."
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ayuda_imagen"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Lista de las actividades -->
+    <TextView
+        android:id="@+id/activities_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actividades"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/splash_bg_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ayuda_descripcion"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Descripción de las 7 actividades -->
+    <TextView
+        android:id="@+id/activities_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1. Cerdo Mikeldi.\n2. Feria de Durango.\n3. Sirena de bombardeo.\n4. Basílica.\n5 y 6. Rio.\n7. Escudo de armas."
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activities_title"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Botón de cierre de la ayuda -->
+    <Button
+        android:id="@+id/botonAyuda_volver"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:backgroundTint="@color/splash_bg_contrast"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activities_description"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
